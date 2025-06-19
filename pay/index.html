@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TrendQash - Make Payments</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            jakarta: ['"Plus Jakarta Sans"', 'sans-serif']
+          },
+          colors: {
+            'brand-blue': '#5b9bd5',
+            'mtn-orange': '#f4a261',
+            'vodafone-blue': '#5b9bd5',
+            'airtel-green': '#2dd4bf'
+          }
+        }
+      }
+    }
+  </script>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 flex items-center justify-center p-4 font-jakarta">
+  <!-- Background pattern -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-20 left-10 w-32 h-32 rounded-full border-2 border-white"></div>
+    <div class="absolute top-40 right-20 w-24 h-24 rounded-full border border-white"></div>
+    <div class="absolute bottom-32 left-20 w-20 h-20 rounded-full border border-white"></div>
+    <div class="absolute bottom-20 right-10 w-28 h-28 rounded-full border-2 border-white"></div>
+  </div>
+
+  <div class="w-full max-w-md mx-auto relative z-10">
+    <div class="mb-12 text-center">
+      <img src="https://trendqash.com/user/build/assets/images/brand-logos/desktop-dark.png" alt="TrendQash Logo" class="inline-block w-32">
+    </div>
+
+    <!-- Main Card -->
+    <div class="bg-white rounded-xl p-8 shadow-2xl relative overflow-hidden">
+      <div class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-blue-100 opacity-30"></div>
+      <div class="absolute -bottom-8 -right-8 w-24 h-24 rounded-full bg-blue-50 opacity-40"></div>
+
+      <div class="relative z-10">
+        <h2 class="text-xl font-bold text-gray-900 mb-2">MAKE PAYMENTS</h2>
+        <p class="text-gray-400 text-base mb-8 font-medium">EASY AND QUICK</p>
+
+        <div class="space-y-4">
+          <button onclick="location.href='/mtn'" class=" bg-orange-400 hover:bg-orange-500 text-white font-bold py-3 px-6 rounded-xl text-base transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            PAY WITH MTN
+          </button>
+
+          <button onclick="location.href='/card'" class=" bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-xl text-base transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            PAY WITH CARD or EFT
+          </button>
+
+          <button onclick="showVodafoneAlert()" class=" bg-teal-400 hover:bg-teal-500 text-white font-bold py-3 px-6 rounded-xl text-base transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            PAY WITH VODACOM
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <script>
+function showVodafoneAlert() {
+  Swal.fire({
+    icon: 'info',
+    title: 'Service Maintenance',
+    text: 'Vodacon payments are currently under maintenance. Kindly use MTN or Card payments.',
+    confirmButtonText: 'OK, Got it',
+    confirmButtonColor: '#5b9bd5',
+    backdrop: `
+      rgba(0,0,123,0.4)
+      left top
+      no-repeat
+    `,
+    showClass: {
+      popup: 'animate__animated animate__fadeInDown'
+    },
+    hideClass: {
+      popup: 'animate__animated animate__fadeOutUp'
+    }
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TrendQash - MTN Payment Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            jakarta: ['"Plus Jakarta Sans"', 'sans-serif']
+          },
+          colors: {
+            'brand-blue': '#5b9bd5',
+            'mtn-orange': '#f4a261'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 flex items-center justify-center p-4 font-jakarta">
+  <div class="w-full max-w-md mx-auto relative z-10">
+    <!-- Logo -->
+    <div class="mb-8 text-center">
+      <img src="https://trendqash.com/user/build/assets/images/brand-logos/desktop-dark.png" alt="TrendQash Logo" class="inline-block w-32">
+    </div>
+
+    <!-- Card -->
+    <div class="bg-white rounded-xl p-6 shadow-2xl relative overflow-hidden">
+      <!-- Decorative circles -->
+      <div class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-blue-100 opacity-30"></div>
+      <div class="absolute -bottom-8 -right-8 w-24 h-24 rounded-full bg-blue-50 opacity-40"></div>
+
+      <div class="relative z-10">
+        <h2 class="text-xl font-bold text-gray-900 mb-2">TrendQash MTN Payment Guide (South Africa)</h2>
+        <p class="text-gray-500 text-sm mb-6">Follow these simple steps to send your payment securely.</p>
+
+        <ol class="space-y-4 text-gray-700 list-decimal list-inside">
+          <li>
+            <span class="font-medium">Dial</span> <strong>*120*151#</strong> on your MTN phone.
+          </li>
+
+          <li>
+            <span class="font-medium">Select</span> <strong>"Send Money"</strong> from the menu.
+          </li>
+
+          <li>
+            <span class="font-medium">Enter recipient's details</span><br>
+            Number: <strong>063 545 9031</strong><br>
+            Name: <strong>Hlengie Mafaka</strong>
+          </li>
+
+          <li>
+            <span class="font-medium">Enter Amount</span>: <strong>100 ZAR</strong>
+          </li>
+
+          <li>
+            <span class="font-medium">Confirm with PIN</span>: Enter your MTN Mobile PIN to authorize the transaction.
+          </li>
+
+          <li>
+            <span class="font-medium">Confirmation</span>:<br>
+            When done, share the payment screenshot via <a href="https://wa.me/254705546191" target="_blank" class="text-blue-600 underline">WhatsApp</a>.
+          </li>
+        </ol>
+
+        <div class="mt-6">
+          <button onclick="location.href='https://trendqash.com/user/'" class="w-full bg-mtn-orange hover:bg-orange-500 text-white font-bold py-3 px-6 rounded-2xl text-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            ACCESS DASHBOARD
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

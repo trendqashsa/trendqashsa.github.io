@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Meta Data -->
-        <meta charset="UTF-8">
-        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="TrendQash - A responsive, secure, and engaging dashboard for tracking earnings, bonuses, withdrawals, and activities.">
-<meta name="author" content="TrendQash Developers">
-<meta name="keywords" content="TrendQash, earnings tracker, M-PESA dashboard, crypto payouts, referral bonuses, online income, financial dashboard, admin panel, Bootstrap 5 admin, dashboard, Kenya fintech platform">
+  <!-- Meta Data -->
+  <meta charset="UTF-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="TrendQash - A responsive, secure, and engaging dashboard for tracking earnings, bonuses, withdrawals, and activities.">
+  <meta name="author" content="TrendQash Developers">
+  <meta name="keywords" content="TrendQash, earnings tracker, M-PESA dashboard, crypto payouts, referral bonuses, online income, financial dashboard, admin panel, Bootstrap 5 admin, dashboard, Kenya fintech platform">
 
-<!-- Title -->
-<title>TrendQash Dashboard - Earn, Withdraw, and Enjoy</title>
+  <!-- Title -->
+  <title>TrendQash Dashboard - Earn, Withdraw, and Enjoy</title>
 
-        
-        <!-- Favicon -->
-        <link rel="icon" href="https://trendqash.com/user/build/assets/images/brand-logos/favicon.ico" type="image/x-icon">
+  <!-- Favicon -->
+  <link rel="icon" href="https://trendqash.com/user/build/assets/images/brand-logos/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -34,8 +34,14 @@
       }
     }
   </script>
- 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <style>
+    html {
+      -webkit-text-size-adjust: none;
+      text-size-adjust: none;
+    }
+  </style>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 flex items-center justify-center p-4 font-jakarta">
   <!-- Background pattern -->
@@ -57,19 +63,19 @@
       <div class="absolute -bottom-8 -right-8 w-24 h-24 rounded-full bg-blue-50 opacity-40"></div>
 
       <div class="relative z-10">
-        <h2 class="text-xl font-bold text-gray-900 mb-2">MAKE PAYMENTS</h2>
-        <p class="text-gray-400 text-base mb-8 font-medium">EASY AND QUICK</p>
+        <h2 class="text-[16px] font-bold text-gray-900 mb-2">MAKE PAYMENTS</h2>
+        <p class="text-[12px] text-gray-400 mb-8 font-medium">EASY AND QUICK</p>
 
         <div class="space-y-4">
-          <button onclick="location.href='/pay/paymtn'" class=" bg-orange-400 hover:bg-orange-500 text-white font-bold py-3 px-6 rounded-xl text-base transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          <button onclick="location.href='/pay/paymtn'" class="bg-orange-400 hover:bg-orange-500 text-white font-bold py-3 px-6 rounded-xl text-[14px] transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
             PAY WITH MTN
           </button>
 
-          <button onclick="location.href='/pay/card'" class=" bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-xl text-base transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          <button onclick="location.href='/pay/card'" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-xl text-[14px] transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
             PAY WITH CARD or EFT
           </button>
 
-          <button onclick="showVodafoneAlert()" class=" bg-teal-400 hover:bg-teal-500 text-white font-bold py-3 px-6 rounded-xl text-base transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          <button onclick="showVodafoneAlert()" class="bg-teal-400 hover:bg-teal-500 text-white font-bold py-3 px-6 rounded-xl text-[14px] transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
             PAY WITH VODACOM
           </button>
         </div>
@@ -77,27 +83,27 @@
     </div>
   </div>
 
- <script>
-function showVodafoneAlert() {
-  Swal.fire({
-    icon: 'info',
-    title: 'Service Maintenance',
-    text: 'Vodacon payments are currently under maintenance. Kindly use MTN or Card payments.',
-    confirmButtonText: 'OK, Got it',
-    confirmButtonColor: '#5b9bd5',
-    backdrop: `
-      rgba(0,0,123,0.4)
-      left top
-      no-repeat
-    `,
-    showClass: {
-      popup: 'animate__animated animate__fadeInDown'
-    },
-    hideClass: {
-      popup: 'animate__animated animate__fadeOutUp'
+  <script>
+    function showVodafoneAlert() {
+      Swal.fire({
+        icon: 'info',
+        title: 'Service Maintenance',
+        text: 'Vodacom payments are currently under maintenance. Kindly use MTN or Card payments.',
+        confirmButtonText: 'OK, Got it',
+        confirmButtonColor: '#5b9bd5',
+        backdrop: `
+          rgba(0,0,123,0.4)
+          left top
+          no-repeat
+        `,
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+      });
     }
-  });
-}
-</script>
+  </script>
 </body>
 </html>

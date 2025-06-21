@@ -67,7 +67,7 @@
         <p class="text-[12px] text-gray-400 mb-8 font-medium">EASY AND QUICK</p>
 
         <div class="space-y-4">
-          <button onclick="location.href='/pay/paymtn'" class="bg-orange-400 hover:bg-orange-500 text-white font-bold py-3 px-6 rounded-xl text-[14px] transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          <button onclick="showVodafoneAlert()" class="bg-orange-400 hover:bg-orange-500 text-white font-bold py-3 px-6 rounded-xl text-[14px] transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
             PAY WITH MTN
           </button>
 
@@ -88,7 +88,7 @@
       Swal.fire({
         icon: 'info',
         title: 'Service Maintenance',
-        text: 'Vodacom payments are currently under maintenance. Kindly use MTN or Card payments.',
+        text: 'Vodacom payments are currently under maintenance. Kindly use Card or Bank payments.',
         confirmButtonText: 'OK, Got it',
         confirmButtonColor: '#5b9bd5',
         backdrop: `

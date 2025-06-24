@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Data -->
+  <meta charset="UTF-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="TrendQash - A responsive, secure, and engaging dashboard for tracking earnings, bonuses, withdrawals, and activities.">
+  <meta name="author" content="TrendQash Developers">
+  <meta name="keywords" content="TrendQash, earnings tracker, M-PESA dashboard, crypto payouts, referral bonuses, online income, financial dashboard, admin panel, Bootstrap 5 admin, dashboard, Kenya fintech platform">
+  <title>TrendQash Dashboard - Earn, Withdraw, and Enjoy</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://trendqash.com/user/build/assets/images/brand-logos/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
+            code: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace']
+          },
+          colors: {
+            'brand-blue': '#5b9bd5',
+            'mtn-orange': '#f4a261',
+            'vodafone-blue': '#5b9bd5',
+            'airtel-green': '#2dd4bf'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      -webkit-text-size-adjust: none;
+      text-size-adjust: none;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 flex items-center justify-center p-4 font-jakarta">
+  <div class="w-full max-w-md mx-auto relative z-10">
+    <!-- Logo -->
+    <div class="mb-8 text-center">
+      <img src="https://trendqash.com/user/build/assets/images/brand-logos/desktop-dark.png" alt="TrendQash Logo" class="inline-block w-32">
+    </div>
+
+    <!-- Card -->
+    <div class="bg-white rounded-xl p-6 shadow-2xl relative overflow-hidden">
+      <!-- Decorative circles -->
+      <div class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-blue-100 opacity-30"></div>
+      <div class="absolute -bottom-8 -right-8 w-24 h-24 rounded-full bg-blue-50 opacity-40"></div>
+
+      <div class="relative z-10">
+        <h2 class="text-[16px] font-bold text-gray-900 mb-2">Skrill Payment Guide</h2>
+        <p class="text-gray-500 text-[12px] mb-6">Follow these simple steps to complete your payment securely.</p>
+
+        <ol class="space-y-4 text-gray-700 text-[12px] list-decimal list-inside">
+          <li>
+            <span class="font-medium">Download <strong>Skrill app</strong></span><br>
+            Download it from the App Store or Google Play.
+          </li>
+
+          <li>
+            <span class="font-medium">Create Your Skrill account</span><br>
+            Tap <strong>Register</strong>.<br>
+            Enter your email, name, password, country (South Africa), and currency (ZAR).
+          </li>
+
+          <li>
+            <span class="font-medium">Verify Your Account (if needed)</span><br>
+            Skrill may ask for identity verification.<br>
+            Upload a photo of your ID or passport and a selfie if required.<br>
+            Add funds to your Skrill wallet.
+          </li>
+
+          <li>
+            <span class="font-medium">Click Transfer</span><br>
+            Select <strong>Skrill to Skrill</strong> → <strong>Send to an Email Address</strong>.<br>
+            Enter the email: 
+            <span class="font-code text-[12px] bg-gray-100 px-1 rounded">1trendqashagencies@gmail.com</span>
+            <button onclick="copyEmail()" class="ml-2 text-[10px] text-blue-600 border border-blue-600 rounded px-2 py-0.5 hover:bg-blue-600 hover:text-white transition">
+              Copy
+            </button>
+            <br>
+            Tap <strong>Send</strong>.
+          </li>
+
+          <li>
+            <span class="font-medium">Enter the Amount</span><br>
+            Type: <strong>100 ZAR</strong>.<br>
+            Choose your wallet or card as the payment source.<br>
+            Then complete payment.
+          </li>
+        </ol>
+
+        <div class="mt-6">
+          <button onclick="location.href='https://trendqash.com/user/'" class="w-full bg-orange-400 hover:bg-orange-500 text-white font-bold py-3 px-6 rounded-2xl text-[14px] transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            ACCESS DASHBOARD
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Include SweetAlert2 from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+    function copyEmail() {
+  const email = "1trendqashagencies@gmail.com";
+  navigator.clipboard.writeText(email).then(() => {
+    Swal.fire({
+      icon: 'success',
+      title: 'Copied!',
+      text: 'Payment email has been copied to your clipboard.',
+      confirmButtonColor: '#5b9bd5',
+      timer: 2000,
+      showConfirmButton: false,
+      toast: true,
+      position: 'top-end'
+    });
+  }).catch(() => {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops!',
+      text: 'Failed to copy email. Please try again.',
+      confirmButtonColor: '#f87171',
+      timer: 3000,
+      showConfirmButton: true
+    });
+  });
+}
+  </script>
+</body>
+</html>
